@@ -10,7 +10,7 @@
     <!-- GUI & Control-->
     <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="copilot_interface"/>
     <!-- Launch Control Program -->
-    <node pkg="copilot_interface" type="control.py" name="control"/>
+    <!-- <node pkg="copilot_interface" type="control.py" name="control"/> -->
 
     <!-- Launch Camera Viewer -->
     <node pkg="camera_viewer" type="switcher.py" name="camera_viewer"/>
