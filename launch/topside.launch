@@ -2,7 +2,7 @@
 
     <!-- ROV Control Interface -->
     <!-- Launch Joystick Nodes -->
-    <include file="$(find rov_control)/launch/joy_interface.launch"/>
+    <include file="$(find rov_control_interface)/launch/joy_interface.launch"/>
     <!-- Launch Python Files-->
     <node pkg="rov_control_interface" type="drive_control.py" name="drive_control"/>
     <node pkg="rov_control_interface" type="autonomous.py" name="autonomous"/>
