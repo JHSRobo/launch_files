@@ -1,18 +1,32 @@
 <launch>
 
-    <!-- ROV Control Interface -->
-    <!-- Launch Joystick Nodes -->
-    <include file="$(find rov_control_interface)/launch/control_interface.launch"/>
-    <!-- Launch Python Files-->
-    <node pkg="rov_control_interface" type="drive_control.py" name="drive_control"/>
-    <node pkg="rov_control_interface" type="autonomous.py" name="autonomous"/>
+    <!-- Joystick node -->
+    <node respawn="true" pkg="joy" type="joy_node" name="joystick" >
+      <remap from="joy" to="joystick"/>
+      <param name="dev" type="string" value="/dev/input/by-id/usb-Logitech_Logitech_Extreme_3D-joystick" />
+      <param name="deadzone" value="0.1" />
+      <param name="autorepeat_rate" value="2"/>
+    </node>
 
-    <!-- GUI & Control-->
+    <!--  Throttle node -->
+    <node respawn="true" pkg="joy" type="joy_node" name="throttle" >
+      <remap from="joy" to="throttle"/>
+      <param name="dev" type="string" value="/dev/input/by-id/usb-Thrustmaster_TWCS_Throttle-joystick" />
+      <param name="deadzone" value="0.1" />
+      <param name="autorepeat_rate" value="2"/>
+    </node>
+    
+    <!-- ROV Control nodes -->
+    <node pkg="rov_control" type="drive_control.py" name="drive_control"/>
+    <node pkg="rov_control" type="autonomous.py" name="autonomous"/>
+
+    <!-- RQT node-->
     <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="copilot_interface"/>
-    <!-- Launch Control Program -->
-    <!-- <node pkg="copilot_interface" type="control.py" name="control"/> -->
+    
+    <!-- Control node -->
+    <node pkg="copilot_interface" type="control.py" name="control"/>
 
-    <!-- Launch Camera Viewer -->
+    <!-- Camera node -->
     <node pkg="camera_viewer" type="switcher.py" name="camera_viewer"/>
 
 </launch>
