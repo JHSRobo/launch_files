@@ -27,6 +27,6 @@
     <node pkg="copilot_interface" type="control.py" name="control"/>
 
     <!-- Camera node -->
-    <node pkg="camera_viewer" type="switcher.py" name="camera_viewer"/>
+    <node pkg="cameras" type="switcher.py" name="camera_viewer"/>
 
 </launch>
