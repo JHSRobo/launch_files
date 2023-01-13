@@ -24,7 +24,7 @@ If the controller that you are using for verticals is not working make sure that
 * Current maintaner: Michael Equi
 
 * Contirbutors:
-  * Michael Equi - initial work
+  * Michael Equi '19 - initial work
 
 ## Helpful Resources
 
