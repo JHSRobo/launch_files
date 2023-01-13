@@ -23,8 +23,9 @@
     <!-- RQT node-->
     <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="copilot_interface"/>
     
-    <!-- Control node -->
+    <!-- Control nodes -->
     <node pkg="copilot_interface" type="control.py" name="control"/>
+    <node pkg="copilot_interface" type="autoControl.py" name="autoControl"/>
 
     <!-- Camera node -->
     <node pkg="cameras" type="switcher.py" name="camera_viewer"/>
