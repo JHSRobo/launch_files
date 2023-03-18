@@ -1,4 +1,7 @@
 <launch>
+ <!-- drq diagnostic -->
+   <!-- <node pkg="drq_ros" type="drq1250_ros.py" name="drq_ros1" args="0x08"/> -->
+   <!-- <node pkg="drq_ros" type="drq1250_ros.py" name="drq_ros2" args="0x0a"/> -->
  
  <!-- depth sensor -->
    <node pkg="depth_sensor" type="depth_sensor.py" name="depth_sensor"/>
