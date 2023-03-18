@@ -1,0 +1,13 @@
+bool thruster_status
+float32 linear_sense
+float32 angular_sense
+float32 vertical_sense
+int32 camera
+bool gpio_pin_23
+bool gpio_pin_24
+bool gpio_pin_25
+bool gpio_pin_5
+bool gpio_pin_19
+bool gpio_pin_16
+bool screenshot
+bool coral
