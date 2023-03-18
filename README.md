@@ -28,4 +28,4 @@ If the controller that you are using for verticals is not working make sure that
 
 ## Helpful Resources
 
-* Links, information, external articles that were helpful in creating anything in this package.
+* Links, information, external articles that were helpful in creating anything in this package
